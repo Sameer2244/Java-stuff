@@ -21,14 +21,7 @@ public class Main {
         board.drawBoard();
         System.out.println();
         for(int i=0;i<9;i++){
-        	
-        	if(i%2==0) {
-        		System.out.println("your turn");
-        		player.turn(sc);
-        	}else {
-        		System.out.println("computers turn");
-        		ai.turn(sc);
-        	}
+
         	if(Result.result()) {
                 System.out.println("you win! :)");
 
@@ -40,6 +33,13 @@ public class Main {
 
                 System.out.println("It's your bad day,Thanks for Playing.");
         		break;
+        	}
+        	if(i%2==0) {
+        		System.out.println("your turn");
+        		player.turn(sc);
+        	}else {
+        		System.out.println("computers turn");
+        		ai.turn(sc);
         	}
         	if(endgame) {
         		System.out.println("entered bad data,please restart the application.");
